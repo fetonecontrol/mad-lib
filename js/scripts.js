@@ -1,26 +1,25 @@
 //Bussiness Logic
 const wordPuzzle = "puzzle";
-const wordSplit = wordPuzzle.split('');
-console.log(wordSplit);
-vowels = [a, e, i, o, u];
+  let wordSplit = wordPuzzle.split('');
+function vowelReplace(element){ 
+  for (i=0; i<wordSplit.length-1; i++) {
+    if (element[i] === "a" || element[i] === "e" || element[i] === "i" || element[i] === "o" || element[i] === "u") {
+      wordSplit[i] = "-";
+      console.log(wordSplit);
+      return wordSplit;
+    };
+  };
+};
 
-wordSplit.forEach(letter){
-  if (letter === vowels []) {
-    letter = "-"
-
-  }
-}
 
 //UI Logic
-for (let index= 0; index += 1)
-$("form#wordPuzzle").submit(function(event) {
-
-if (letter = 'a' || letter = 'e' |)
-
-
-$().hide();
-$().show();
-
+$(document).ready(function(){
   event.preventDefault();
+  console.log(wordSplit);
 
+  const newSplit = vowelReplace(wordSplit);
+  //JoinSplit = newSplit.join();
+  //console.log(JoinSplit);
 });
+
+
